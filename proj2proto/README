@@ -1,0 +1,3 @@
+This is the userspace prototype for the mailbox datastructure
+
+Run make and then ./mbx to run the driver

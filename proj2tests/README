@@ -1,0 +1,30 @@
+This is a readme for Tony Cruz's CMSC421 Project 2 Test Drivers
+
+The concept of my testing was to approach each parameter and their possible edge cases for each system call. Given that most vars were unsigned i didn't have to test for negative values although i did test for invalid pointers, names, sizes, and PID/UID in case of faulty error input.
+Given basic functionality is required to perform tests they're less focused on
+
+quick rundown of tests:
+Create: invalid name, duplicate name, overflow size
+Resize: invalid name
+Delete: incorrect PID/UID, Invalid name
+Write: Invalid pointer, oversized offset/size, invalid name
+Read: Invalid pointer, oversized offset/size, invalid name
+Size: empty/full Mailbox, invalid mailbox
+List: over/undersized max_entries, invalid list
+Count:Empty mailbox list, full list
+ 
+
+
+
+
+The make file works as so....
+
+1. run [ make ] to build initial test batch
+2. run [ ./big ] for initial tests
+3. [ cd last_test ] and run [ make ] to build last test
+2. run [ ./last ] to test delete from separate process
+3. run [ sudo ./last ] to test delete from root privileges 
+
+
+
+Thank you for grading my project, I hope you enjoyed yourself.

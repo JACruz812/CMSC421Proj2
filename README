@@ -1,0 +1,20 @@
+Linux kernel Project 2, Tony Cruz, CMSC421
+============
+This project is to create a new kernel data structure called mailboxes, implementing linked lists
+
+10-3-20 update:
+Today i worked on the user-space prototype for the mailboxes DS.
+I made the create, write, delete, and add functions and they run successfully
+Only issue atm is that the write function is leaking
+
+Future steps includes implementing other funcs and eliminating mem leaks.
+
+
+10-11-20 update:
+This weekend i worked on moving the mailbox DS to kernel space as well as creating tests for the separate space implementations.
+I was able to create a truncate function as well that ensures the user passes in a name that is less than 64 chars or truncates it if it's longer
+So far all of the functions work in user space but there are still issues with the list fucntion in kernel space.
+
+
+10-16-20 Final Update:
+This week i finished up the implementations on the mailbox IPC datastructure. I was able to get all the functions working without any memory leaks and created an test directory. This directory holds the drivers that I tested my system calls with. The tests consisted of mostly edge cases given that basic functionality was obvious. I'm definitly glad i took my time on this one
